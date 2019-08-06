@@ -18,6 +18,7 @@ int main(){
     if(func(a)*func(b) < 0){
         while(i <= 8){
             p = (a + b) / 2.0;
+            printf("iteracao %d: P = %lf\n", i, p);
             if(func(a) * func(p) < 0){
                 b = p;
             }
@@ -25,11 +26,11 @@ int main(){
                 a = p;
             }
             else{
-                printf("Raiz encontrada na interacao %d\n", i);
+                printf("Raiz encontrada na iteracao %d\n", i);
             }
             i++;
         }
-        printf("Raiz = %lf, a distancia de 10 ^ %.0lf pode ser obtido apos %.0lf iteracoes\n", p, e, n);
+        printf("Raiz =~ %lf, a distancia de 10 ^ %.0lf pode ser obtido apos %.0lf iteracoes\n", p, e, n);
     }
     else{
         printf("Nao ha raiz entre esse intervalo\n");
